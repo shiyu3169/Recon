@@ -1,0 +1,48 @@
+Task 1: What are your apps doing with the network?
+
+Question 1: How many sites are contacted by each app that you use?
+
+Approach
+I downloaded all data files from recon server. It has 2000 dump data files with 1.3GB size in total from the April 3rd to April 13th. Then reason it generates hundreds of files daily is Iphone disconnects VPN everytime you lock your screnn for long. Also, Iphone disconnects VPN when the network environment changes between wifi and LTE. Hence, each time the VPN gets reconnected, one more dump data file is generated. Therefore it takes me much time to parse it. 
+
+After parsing the data by modified "all.sh" and analyze.py. I got a list of Company/ISP with times of request saved in output.txt:
+GoDaddy.com, LLC: 1918 -- From website
+Akamai Technologies, Inc.: 2077898 -- Akamai CDN
+Acxiom Corporation: 4110
+Unknown: 1122077 -- The tricky part, Most of them are supposed from China 
+Google Inc.: 1540735 -- Map, Search, Inbox
+Voxel Dot Net, Inc.: 3836,
+New Relic: 8494
+Inktomi Corporation: 3562
+LivePerson, Inc.: 25208
+Blackboard Inc.: 9996 -- Blackboard app/website
+Tremor Video: 3014 
+Yahoo! Inc.: 6850 -- Weather
+Fastly: 9864
+NeuStar, Inc.: 3562
+Adobe Systems Inc.: 13974 -- Adobe reader
+Amazon.com, Inc.: 26409 -- Amazon app/website
+AOL Inc.: 10138 
+Server Central Network: 2740
+Hurricane Electric, Inc.: 102120
+Apple Inc.: 1895533 -- Apple data tracking
+MCI Communications Services, Inc. d/b/a Verizon Business: 8494
+Asia Pacific Network Information Centre: 8480523 -- CDN
+Twitter Inc.: 12056 -- I srsly don't know which app this is from
+Microsoft Corporation: 2466 -- Microoffice
+CDNetworks Inc.: 95000 -- CDN
+RIPE Network Coordination Centre: 19180
+Northeastern University: 362712 -- NEU
+Amazon Technologies Inc.: 99453 -- Amazon website/app
+
+*All other companies are maketing service or network suppor service. 
+
+Question 2: Does that traffic seem legitimate?
+Other than unknown companies. I did not find any suspicious traffic. I think all traffics are legitimate. However, I manually checked some of unknown in google. Most of them are from Tencent, which is the Wechat. And some of them are from Wangyi, the News app.
+
+Question 3: Is there anything surprising in your data?
+The most surprising fact is most of traffic are served by CDN like Akamai, Asia Pacific Network Information Centre. And I didn't expect to have any traffic with Twitter, because I never used it. I think one of my app has communication with it.
+
+
+Task 2: Identify PII
+I updated grepForStuff copy.sh to take a directory of dump files in order to track useful PII such as geolocation, EMEI number, phone number, credit card and/or email address. The only PII that was leaked by my device is my location. This information was leaked by iPhone's built-in Weather App and Map App. Also, sometimes I provided permission for website and app to track my location, e.g. Uber. Other than that, luckily Iphone protected my personal information well. 

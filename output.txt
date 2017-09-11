@@ -1,0 +1,28 @@
+GoDaddy.com, LLC: 1918
+Akamai Technologies, Inc.: 2077898
+Acxiom Corporation: 4110
+Unknown: 1122077
+Google Inc.: 1540735
+Voxel Dot Net, Inc.: 3836
+New Relic: 8494
+Inktomi Corporation: 3562
+LivePerson, Inc.: 25208
+Blackboard Inc.: 9996
+Tremor Video: 3014
+Yahoo! Inc.: 6850
+Fastly: 9864
+NeuStar, Inc.: 3562
+Adobe Systems Inc.: 13974
+Amazon.com, Inc.: 26409
+AOL Inc.: 10138
+Server Central Network: 2740
+Hurricane Electric, Inc.: 102120
+Apple Inc.: 1895533
+MCI Communications Services, Inc. d/b/a Verizon Business: 8494
+Asia Pacific Network Information Centre: 8480523
+Twitter Inc.: 12056
+Microsoft Corporation: 2466
+CDNetworks Inc.: 95000
+RIPE Network Coordination Centre: 19180
+Northeastern University: 362712
+Amazon Technologies Inc.: 99453
